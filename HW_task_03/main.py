@@ -45,7 +45,6 @@ def display_log_counts(counts: dict):
 
 
 if __name__ == "__main__":
-    # log_file_path = "my_log_error.log"
     script_dir = os.path.dirname(os.path.abspath(__file__))
     log_file_path = os.path.join(script_dir, "my_log_error.log")
     print(f"Аналіз файлу: {log_file_path}\n")
