@@ -2,7 +2,7 @@ import re
 from typing import Callable, Generator
 
 def generator_numbers(text: str) -> Generator[float, None, None]:
-    # Шаблон шукає числа з плаваючою крапкою, які відокремлені пробілами або межами рядка
+
     pattern = r'(?:^|\s)(\d+\.\d+)(?=$|\s)'
     for match in re.finditer(pattern, text):
         yield float(match.group(1))
