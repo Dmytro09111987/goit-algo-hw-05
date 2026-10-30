@@ -29,6 +29,14 @@ def change_contact(args, contacts):
     contacts[name] = phone
     return "Contact updated."
 
+@input_error
+def show_phone(args, contacts):
+    if len(args) < 1:
+        raise IndexError
+    name = args[0]
+    return contacts[name]
+        
+
 def show_all(contacts):
     if not contacts:
         return "No contacts saved yet."
